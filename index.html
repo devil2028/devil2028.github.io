@@ -146,16 +146,25 @@
   <script>
     window.$docsify = {
       el: '#app',
-      name: '我的博客',
+      name: 'Devil',
       loadSidebar: true,
       maxLevel: 4,
       subMaxLevel: 2,
       auto2top: true,
       homepage: 'README.md',
+      alias: {
+        '.*?/_sidebar.md': '_sidebar.md'
+      },
+      autoHeader: false,
+      mergeNavbar: true,
       search: {
+        maxAge: 86400000,
         paths: 'auto',
         placeholder: '搜索',
-        noData: '找不到结果'
+        noData: '找不到结果',
+        depth: 6,
+        hideOtherSidebarContent: false,
+        namespace: 'website-1',
       }
     }
   </script>
