@@ -4,4 +4,7 @@
   * [Git用户切换](docs/articles/tech/user-switch.md)
 
 * 项目管理
-  * [待添加](docs/articles/management/README.md) 
+  * [风险管理](docs/articles/management/risk-management.md) 
+
+* AI
+  * [Agent](docs/articles/ai/1-Agent.md)
