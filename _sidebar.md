@@ -8,3 +8,7 @@
 
 * AI
   * [Agent](docs/articles/ai/1-Agent.md)
+
+* 随笔
+  * [35岁的那些事儿](docs/articles/life/1-35.md)
+
