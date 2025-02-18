@@ -13,4 +13,5 @@
 
 * 随笔
   * [35岁的那些事儿](docs/articles/life/1-35.md)
+  * [OKR和KPI的区别](docs/articles/life/2-OKR&KPI.md)
 
