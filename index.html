@@ -196,36 +196,26 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
   <!-- Mermaid -->
-  <script src="//cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
   <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      securityLevel: 'loose',
-      theme: 'default',
-      flowchart: {
-        htmlLabels: true,
-        curve: 'basis'
-      }
-    });
-
-    // 添加 Mermaid 渲染支持
+    var num = 0;
+    mermaid.initialize({ startOnLoad: true });
     window.$docsify.markdown = {
       renderer: {
         code: function(code, lang) {
           if (lang === "mermaid") {
-            try {
-              mermaid.parse(code);
-              return '<div class="mermaid">' + code + '</div>';
-            } catch (e) {
-              console.error("Mermaid error:", e);
-              return '<pre data-lang="mermaid">' + code + '</pre>';
-            }
+            return (
+              '<div class="mermaid">' +
+              code +
+              "</div>"
+            );
           }
           return this.origin.code.apply(this, arguments);
         }
       }
-    }
+    };
   </script>
 </body>
 </html> 
