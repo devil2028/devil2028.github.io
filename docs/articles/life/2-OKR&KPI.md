@@ -43,7 +43,7 @@ OKR（目标与关键结果）和KPI（关键绩效指标）都是用于衡量�
 如果是做个人计划管理，可能会根据自己的需求来选择，若需要挑战性和方向性的目标，OKR会更适合；若侧重于日常任务和效率，KPI则是一个不错的工具。
 
 ```mermaid
-graph LR
+graph TB
     A[管理工具] --> B[OKR]
     A --> C[KPI]
     
@@ -55,7 +55,10 @@ graph LR
     C --> H[稳定可控]
     C --> I[长期稳定]
     
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#fbf,stroke:#333,stroke-width:2px
-```
+    classDef default fill:#f4f4f4,stroke:#666,stroke-width:1px;
+    classDef highlight fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
+    classDef special fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px;
+    
+    class A highlight;
+    class B,C special;
+    class D,E,F,G,H,I default;

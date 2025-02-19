@@ -141,6 +141,19 @@
       width: 60px;
       height: 60px;
     }
+
+    /* 添加 Mermaid 图表的移动端样式 */
+    .mermaid {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .mermaid {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -197,7 +210,24 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
-    mermaid.initialize({ startOnLoad: true });
+    // Mermaid 配置
+    var config = {
+      startOnLoad: true,
+      theme: 'default',
+      logLevel: 'fatal',
+      securityLevel: 'loose',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis'
+      },
+      themeVariables: {
+        fontSize: '16px'
+      }
+    };
+    
+    // 初始化 Mermaid
+    mermaid.initialize(config);
   </script>
 </body>
 </html> 
