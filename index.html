@@ -189,7 +189,25 @@
         depth: 6,
         hideOtherSidebarContent: false,
         namespace: 'website-1',
-      }
+      },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return '<div class="mermaid">' + code + '</div>';
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            // 初始化所有 mermaid 图表
+            mermaid.init(undefined, '.mermaid');
+          });
+        }
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -200,22 +218,15 @@
   <!-- Mermaid -->
   <script src="//cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
   <script>
-    var num = 0;
-    mermaid.initialize({ startOnLoad: true });
-    window.$docsify.markdown = {
-      renderer: {
-        code: function(code, lang) {
-          if (lang === "mermaid") {
-            return (
-              '<div class="mermaid">' +
-              code +
-              "</div>"
-            );
-          }
-          return this.origin.code.apply(this, arguments);
-        }
+    mermaid.initialize({
+      startOnLoad: false,  // 禁用自动加载
+      theme: 'default',
+      securityLevel: 'loose',
+      flowchart: {
+        htmlLabels: true,
+        useMaxWidth: true
       }
-    };
+    });
   </script>
 </body>
 </html> 
