@@ -5,6 +5,7 @@
   * [大模型是怎么训练出来的？](docs/articles/ai/2-LargeModel.md)
   * [蒸馏技术是什么？](docs/articles/ai/3-蒸馏技术.md)
   * [RAG是什么？](docs/articles/ai/4-RAG.md)
+  * [MCP是什么？](docs/articles/ai/5-MCP.md)
 
 * 项目管理
   * [OKR和KPI的区别](docs/articles/life/2-OKR&KPI.md)
