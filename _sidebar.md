@@ -15,6 +15,7 @@
   * [Git用户切换](docs/articles/tech/user-switch.md)
   * [fvm常用命令](docs/articles/tech/2-fvm常用命令.md)
   * [搭建本地Mock服务](docs/articles/tech/3-mockServer.md)
+  * [.gitignore不立即生效](docs/articles/tech/4-gitignore.md)
 * 随笔
   * [35岁的那些事儿](docs/articles/life/1-35.md)
   
